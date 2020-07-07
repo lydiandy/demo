@@ -1,4 +1,4 @@
-module controller
+module web
 
 import demo
 
