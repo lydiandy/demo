@@ -1,10 +1,8 @@
-module router
+module main
 
-import demo
-import config
 import controller
 
-pub fn load(app *demo.App,cfg *config.Config) {
+pub fn load_router(app *App,cfg Config) {
 	app.get('/',controller.index)
 
 	app.post('/get_user_list',controller.get_user_list)

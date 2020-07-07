@@ -1,4 +1,4 @@
-module config
+module main
 
 import toml
 
@@ -14,7 +14,7 @@ struct Db {
 	client   string
 	host     string
 	port     int
-	name     string
+	database string
 	user     string
 	password string
 }
@@ -30,7 +30,7 @@ struct Jwt {
 	jwt_cookie string
 }
 
-fn get_config(file string) &Config {
+fn load_config(file string) &Config {
 	config := &Congig{}
 	toml.parse_file(file, config) or {
 		panic('read config file failed:$err ')

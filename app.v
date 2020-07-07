@@ -18,7 +18,7 @@ pub mut:
 	middleware []Middleware
 }
 
-//Application setting
+// Application setting
 pub struct Settting {
 pub mut:
 	name string
@@ -37,12 +37,14 @@ pub fn (app App) use(m ...Middleware) {
 pub fn (app App) connect(m ...Middleware) {
 }
 
+// listen prot
 pub fn (mut app App) listen(port int) {
 }
 
 pub fn (mut app App) listen_tls(prot int) {
 }
 
+// the same with listen
 pub fn (mut app App) run(port int) {
 }
 

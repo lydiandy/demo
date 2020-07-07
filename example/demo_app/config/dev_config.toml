@@ -22,9 +22,7 @@ password = ""
 jwt_key = "key"
 jwt_cookie =""
 
-
-#sms
-#[sms]
+#other cofig
 
 
 
