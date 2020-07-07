@@ -1,7 +1,8 @@
 module demo
 
-type Middleware = fn (c &Context)
+pub type Handler = fn (c &Context)
 
-type Handler = fn (c &Context)
-
-// type Middleware fn(Handler) Handler
+// version two:
+// pub type Middleware = fn (c &Context)
+// version three:
+// pub type Middleware = fn (h Handler) Handler
