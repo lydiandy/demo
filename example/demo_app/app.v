@@ -1,8 +1,8 @@
 module main
 
+// other middleware,each one middleware is one repo in github
 import demo
 import demo.middleware
-//other middleware,each one middleware is one repo in github
 import demo.redirect
 import demo.jwt
 
@@ -26,10 +26,11 @@ fn main() {
 	app.use()
 	// load router
 	load_router(app, config)
+	// or use load router from json file
+	app.load_router('./router/router.json')
 	// run http or https
 	app.listen(9999)
-	app.listen_tls(443,'./ssl/cert.pem', './ssl/key.key')
-
+	app.listen_tls(443, './ssl/cert.pem', './ssl/key.key')
 	app.run(9999)
 	app.run(9999, {
 		cert: './ssl/cert.pem'
