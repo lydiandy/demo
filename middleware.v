@@ -1,11 +1,7 @@
 module demo
 
-type Middleware fn(*Context)
+type Middleware = fn (c &Context)
 
-type Handler fn(*Context)
+type Handler = fn (c &Context)
 
-// type Middleware fn(Handler) Handler 
-
-
-
-
+// type Middleware fn(Handler) Handler

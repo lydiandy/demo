@@ -12,10 +12,9 @@ pub fn new_context() Context {
 
 // params
 pub fn (ctx Context) params(name string) string {
-
 }
-//
 
+//
 // header
 pub fn (ctx Context) header(name string) string {
 }
@@ -31,7 +30,7 @@ pub fn (ctx Context) cookie(name string) string {
 }
 
 // Context content
-pub fn (ctx Context) send(status_code int,body interface{}) {
+pub fn (ctx Context) send(status_code int, body interface) {
 }
 
 pub fn (ctx Context) text(body string, status_code int) {
