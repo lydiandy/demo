@@ -2,8 +2,9 @@ module demo
 
 pub struct Context {
 pub mut:
-	req Request
-	res Response
+	app &App
+	req &Request
+	res &Response
 }
 
 pub fn new_context() Context {

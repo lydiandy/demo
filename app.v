@@ -14,19 +14,27 @@ pub struct App {
 pub mut:
 	port       int
 	env        string
+	settings   &Settings
 	router     []Router
 	middleware []Middleware
+	server     &net.Server
 }
 
 // Application setting
-pub struct Settting {
+pub struct Setttings {
 pub mut:
 	name string
 }
 
 // create Application
-pub fn new() &App {
-	return &App{}
+pub fn new(settings ...Settings) &App {
+	app := App{
+		settings &Settings{}
+	}
+	if settings.len > 0 {
+		app.settings = settings[0]
+	}
+	return &app
 }
 
 // use middlerware
