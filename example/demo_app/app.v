@@ -11,6 +11,8 @@ fn main() {
 	// create app
 	app := demo.new()
 	// load middleware
+	app.use(gzip.new()) // may be one middleware one repo
+
 	app.use(middleware.logger())
 	app.use(middleware.recover())
 	app.use(middleware.gzip())

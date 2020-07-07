@@ -1,4 +1,4 @@
 module middleware
 
-pub fn recover() {
+pub fn recover() Middleware {
 }

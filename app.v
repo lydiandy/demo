@@ -18,6 +18,7 @@ pub mut:
 	middleware []Middleware
 }
 
+//Application setting
 pub struct Settting {
 pub mut:
 	name string

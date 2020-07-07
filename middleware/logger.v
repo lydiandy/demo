@@ -1,15 +1,4 @@
-module logger
+module middleware
 
-//usage:
-//import demo.logger
-//app.use(logger.new(cfg))
-
-pub struct Config() {
-
+pub fn logger() Middleware {
 }
-
-pub fn new(cfg Config) {
-	
-}
-
-
