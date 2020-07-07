@@ -2,6 +2,9 @@ module main
 
 import demo
 import demo.middleware
+//other middleware
+import demo.redirect
+import demo.jwt
 
 fn main() {
 	// load config,according to env variable,load dev_config or prod_config
@@ -10,22 +13,23 @@ fn main() {
 	app := demo.new()
 	// load middleware
 	// core middleware
+	app.use(middleware.static_file('./static'))
 	app.use(middleware.logger())
 	app.use(middleware.recover())
 	app.use(middleware.compress())
 	app.use(middleware.cors())
 	app.use(middleware.body_limit())
 	// other middleware
-	app.use(gzip.new())
+	app.use(redirect.new())
 	app.use(jwt.new())
 	// project middleware
 	app.use()
-	// static path
-	app.use(middleware.static_file('./static'))
 	// load router
 	load_router(app, config)
-	// app.load_router(file string)
-	// run
+	// run http or https
+	app.listen(9999)
+	app.listen_tls(443,'./ssl/cert.pem', './ssl/key.key')
+	
 	app.run(9999)
 	app.run(9999, {
 		cert: './ssl/cert.pem'

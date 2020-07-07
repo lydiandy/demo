@@ -30,9 +30,9 @@ struct Jwt {
 	jwt_cookie string
 }
 
-fn load_config(file string) &Config {
-	config := &Congig{}
-	toml.parse_file(file, config) or {
+fn load_config(file string) Config {
+	config := Congig{}
+	toml.parse_file(file, &config) or {
 		panic('read config file failed:$err ')
 	}
 	return config
