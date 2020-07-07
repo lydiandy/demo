@@ -52,25 +52,25 @@ pub fn (mut app App) run_tls(port int, certFile, keyFile string) {
 }
 
 // http method
-pub fn (app App) get(path string, h ...Handler) {
+pub fn (app App) get(path string, m ...Middleware) {
 }
 
-pub fn (app App) post(path string, h ...Handler) {
+pub fn (app App) post(path string, m ...Middleware) {
 }
 
-pub fn (app App) put(path string, h ...Handler) {
+pub fn (app App) put(path string, m ...Middleware) {
 }
 
-pub fn (app App) delete(path string, h ...Handler) {
+pub fn (app App) delete(path string, m ...Middleware) {
 }
 
-pub fn (app App) head(path string, h ...Handler) {
+pub fn (app App) head(path string, m ...Middleware) {
 }
 
-pub fn (app App) options(path string, h ...Handler) {
+pub fn (app App) options(path string, m ...Middleware) {
 }
 
-pub fn (app App) any(path string, h ...Handler) {
+pub fn (app App) any(path string, m ...Middleware) {
 }
 
 // router group
