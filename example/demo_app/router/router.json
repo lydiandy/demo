@@ -1,0 +1,22 @@
+[
+	{
+		"method": "POST",
+		"path": "/users",
+		"name": "main.createUser"
+	},
+	{
+		"method": "GET",
+		"path": "/users",
+		"name": "main.findUser"
+	},
+	{
+		"method": "PUT",
+		"path": "/users",
+		"name": "main.updateUser"
+	},
+	{
+		"method": "DELETE",
+		"path": "/users",
+		"name": "main.deleteUser"
+	}
+]
