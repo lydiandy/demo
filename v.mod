@@ -1,5 +1,8 @@
 Module {
-        name: 'demo app'
+        name: 'demo'
+        description:'web framework'
         version: '0.0.1'
-        deps: []
+        license:'MIT'
+        repo_url:'https://github.com/lydiandy/demo'
+        dependencies: []
 }
